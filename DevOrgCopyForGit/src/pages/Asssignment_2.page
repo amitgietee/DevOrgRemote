@@ -1,0 +1,47 @@
+<apex:page controller="Asssignment_2">
+  
+  <h1>Contact List in Salesforce: </h1><br/><br/>
+  
+  <apex:form >
+  <apex:pageBlock >   
+
+            <apex:pageBlockSection >
+
+                <apex:selectList value="{!country}" label="Columns Required" multiselect="true" size="5">
+
+                    <apex:actionSupport event="onchange"/>
+
+                        <apex:selectOptions value="{!countryOptions}"/>
+
+                </apex:selectList>
+
+            </apex:pageBlockSection>             
+
+        </apex:pageBlock>
+  <apex:commandButton value="Show Contact Records: " action="{!showContacts}"/><br/><br/>
+  <apex:pageBlock >
+      <apex:pageBlockTable value="{!contactList}" var="c">
+          <apex:column value="{!c.FirstName}"/>
+          <apex:column value="{!c.Account.Name}"/>
+      </apex:pageBlockTable>
+  </apex:pageBlock>
+  </apex:form>
+  
+  <table>
+  <th>
+      <td>
+      
+      </td>
+  </th>
+  <tr>
+      <td>
+      
+      </td>
+  </tr>
+  </table>
+  
+
+  
+ 
+  
+</apex:page>

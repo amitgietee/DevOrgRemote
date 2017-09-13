@@ -1,0 +1,28 @@
+<apex:page controller="Assignment_12">
+  
+  <h1>Assignment_12</h1>
+  
+  <apex:form >
+      <apex:pageBlock >
+          <apex:pageblocktable value="{!cMap}" var="m">
+              <apex:column value="{!m}"/>
+              
+              <apex:column ><apex:pageBlockTable value="{!cMap[m]}" var="c">
+              <apex:Column value="{!c.Name}"/>
+              
+              </apex:pageBlockTable></apex:column>
+              
+          
+          </apex:pageblocktable>
+      
+      
+      
+      </apex:pageBlock>
+  
+  
+  
+  
+  </apex:form>
+  
+  
+</apex:page>

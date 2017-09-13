@@ -1,0 +1,18 @@
+<apex:page controller="Assignment_3">
+  
+  <h1>User Input Page</h1>
+  <br/>
+  <br/>
+  <br/>
+  Please provide the input:<br/><br/>
+  <apex:form >
+      <apex:outputText value="Number 1:"/><apex:outputText >&nbsp;</apex:outputText><apex:inputText value="{!input1}" required="true"/><br/>
+      <apex:outputText >Number 2:&nbsp;</apex:outputText>
+          <apex:inputText value="{!input2}" required="true"/><br/><br/>
+
+      <apex:commandButton value="Add" action="{!add}" reRender="ot1"/><br/><br/>
+      
+      
+      Result: <apex:outputText value="{!res}" id="ot1"/><br/><br/>
+  </apex:form> 
+</apex:page>

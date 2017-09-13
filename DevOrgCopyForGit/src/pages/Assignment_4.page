@@ -1,0 +1,20 @@
+<apex:page controller="Assignment_4">
+  <!-- Begin Default Content REMOVE THIS -->
+  <h1>Contact List with Salutations Updated: </h1><br/><br/>
+  
+  <apex:Form >
+  <apex:commandButton action="{!Assignment_4M}" value="Update Contact Salutations"/>
+      <apex:pageBlock >
+          <apex:pageblocktable value="{!contactList}" var="clist">
+              <apex:column value="{!clist.Salutation}"/>
+              <apex:column value="{!clist.FirstName}"/>
+              <apex:column value="{!clist.LastName}"/>
+              <apex:column value="{!clist.MobilePhone}"/>
+              <apex:column value="{!clist.Email}"/>
+              <apex:column value="{!clist.MailingCountry }"/>
+              <apex:column value="{!clist.Account.Name}"/>
+          </apex:pageblocktable>
+      </apex:pageBlock><br/><br/>
+      
+  </apex:Form>
+</apex:page>

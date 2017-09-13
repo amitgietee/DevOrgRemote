@@ -1,0 +1,22 @@
+<apex:page controller="Assignment_18_CTRL">
+
+  <h1>Assignment_18: Account Name and Created Date</h1><br/><br/>
+  
+  <apex:pageBlock >
+  
+      <apex:pageblockTable value="{!accList}" var="acc">
+          <apex:column value="{!acc.Name}"/>
+          <apex:column value="{!acc.createdDate}"/>
+          <apex:column headerValue="Created Date Value">
+              <!--<apex:outputtext value="{0, date,yyyy.MM.dd G 'at' HH:mm:ss z}">-->
+              <apex:outputtext value="{0, date,dd/MMM/yyyy }">
+                    <apex:param value="{!acc.createdDate}"></apex:param>
+              </apex:outputtext>
+          </apex:column>
+      </apex:pageblockTable>
+  </apex:pageBlock>
+  
+  
+  
+
+</apex:page>

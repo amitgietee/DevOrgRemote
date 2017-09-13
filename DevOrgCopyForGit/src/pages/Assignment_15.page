@@ -1,0 +1,26 @@
+<apex:page controller="Assignment_15_CTRL">
+
+  <h1>Map within a Map Example</h1><br/><br/>
+  
+  <apex:pageblock >
+      <apex:pageblockTable value="{!oppParentMap}" var="pMap">
+      
+      <apex:column >
+          <apex:outputText >{!pMap}</apex:outputText>
+      </apex:column>
+      <apex:column >
+          <apex:pageblockTable value="{!oppParentMap[pMap]}" var="cMap">
+              <apex:column >
+                  <apex:outputText >{!cMap}</apex:outputText>
+              </apex:column>
+              <apex:column >
+                  <apex:outputText >{!oppParentMap[pMap][cMap]}</apex:outputText>
+              </apex:column>
+          </apex:pageblockTable>
+      </apex:column>
+      </apex:pageblockTable>
+  
+  </apex:pageblock>
+  
+
+</apex:page>

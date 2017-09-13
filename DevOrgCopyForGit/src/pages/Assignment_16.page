@@ -1,0 +1,17 @@
+<apex:page controller="Assignment_16_CTRL">
+
+  <h1>Assignment_16: Wrapper Class</h1>
+  
+  
+  <apex:form >
+  <apex:pageBlock >
+  <apex:pageBlockTable value="{!wrapperClasslist}" var="WC">
+  <apex:column >
+       <apex:inputCheckbox value="{!WC.isSelected}"/> 
+       <apex:outputText >{!WC.a.Name}</apex:outputText>
+  
+  
+  </apex:column></apex:pageBlockTable></apex:pageBlock></apex:form>
+ 
+
+</apex:page>

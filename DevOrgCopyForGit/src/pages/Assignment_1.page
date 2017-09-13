@@ -1,0 +1,21 @@
+<apex:page controller="Assignment_1">
+  <h1>Company Names: </h1><br></br><br></br>
+  <apex:form >
+  <apex:pageBlock >
+      <apex:pageblockTable value="{!acclist}" var="a">
+          <apex:column value="{!a.Name}"/>
+          <apex:column value="{!a.Annual_Revenue__c}"/>
+          <apex:column value="{!a.Expense_on_Salary__c}"/>
+         <!-- <apex:column value="{!a.Contacts_for_Company__r}"/>-->
+         <apex:column headerValue="Contacts">
+          <apex:dataTable value="{!a.Contacts_for_Company__r}" var="b">
+              <apex:column value="{!b.Name}"/>
+              <apex:column value="{!b.Email__c}"/>
+          </apex:dataTable>
+          </apex:column>
+      </apex:pageblockTable>
+  </apex:pageBlock>
+
+</apex:form>
+  
+</apex:page>

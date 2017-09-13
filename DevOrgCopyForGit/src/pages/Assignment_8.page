@@ -1,0 +1,25 @@
+<apex:page controller="Assignment_8">
+<h1>Assignment_8</h1><br/><br/><br/>
+
+Click any button to fetch records:<br/><br/><br/>
+
+<apex:form >
+<apex:commandButton action="{!AllAccounts}" value="Get Accounts" reRender="OP1"/>
+<apex:outputText >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</apex:outputText>
+<apex:commandButton action="{!getOpportunities}" value="Get Opportunities" reRender="Op1" disabled="false"/>
+<apex:outputText >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</apex:outputText>
+<apex:commandButton action="{!clearAll}" value="Clear All" reRender="op1"/>
+
+<br/><br/><br/>
+<apex:outputPanel id="OP1">
+<apex:pageBlock rendered="{!showAccount}">
+<apex:pageblockTable value="{!accountListPage1}" var="a" id="pbt1">
+<apex:column value="{!a.name}"/>
+<apex:column value="{!a.industry}"/>
+</apex:pageblockTable>
+<apex:inputField value="{!accObject.industry}"/>
+</apex:pageBlock>
+</apex:outputPanel>
+
+</apex:form>
+</apex:page>

@@ -1,0 +1,28 @@
+<apex:page controller="Assignment_14_CNTRLR">
+
+  <h1>Cases By Account</h1>
+  
+  <apex:form >
+      <apex:pageBlock >
+          <apex:pageblocktable value="{!accList}" var="a">
+              <apex:column value="{!a.name}"/>
+              <apex:column headerValue="Case(s)">
+                  <apex:pageBlockTable value="{!a.Cases}" var="c">
+                      <apex:column >
+                      <!--<apex:commandlink value="{!c.id }" action="{!goToCase}" target="_blank"/>-->
+                      <apex:commandlink value="{!c.CaseNumber }" action="{!goToCase}" target="_blank">
+                      <apex:param name="caseid" value="{!c.id}" id="caseid1"/>
+                      
+                      
+                      </apex:commandlink>
+                      </apex:column>
+                      
+                  </apex:pageBlockTable>
+              </apex:column>
+          </apex:pageblocktable>
+      
+      </apex:pageBlock>
+  
+  </apex:form>
+
+</apex:page>

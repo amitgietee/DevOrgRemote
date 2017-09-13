@@ -1,0 +1,26 @@
+<apex:page controller="Assignment_6">
+
+  <h1>Assignment_6</h1><br/><br/><br/>
+  
+  <apex:form >
+          <apex:commandButton action="{!showAccounts}" value="Show Accounts" reRender="pb1"/>&nbsp;&nbsp;&nbsp;
+          <apex:commandButton action="{!showContacts}" value="Show Contacts" reRender="pb1"/>&nbsp;&nbsp;&nbsp;
+          <apex:commandButton action="{!showOpportunities}" value="Show Opportunities" reRender="pb1"/>&nbsp;&nbsp;&nbsp;
+          <apex:pageBlock id="pb1">
+          <apex:pageblocktable value="{!accList}" var="alist" id="pbt1" rendered="{!accBoolean}">
+              <apex:column value="{!alist.id}"/>
+              <apex:column value="{!alist.Name}"/>
+          </apex:pageblocktable>
+          <apex:pageblocktable value="{!contactList }" var="clist"  id="pbt2" rendered="{!cntBoolean}">
+              <apex:column value="{!clist.id}"/>
+              <apex:column value="{!clist.Name}"/>
+          </apex:pageblocktable>
+          <apex:pageblocktable value="{!opportunityList }" var="olist"  id="pbt3" rendered="{!oppBoolean}">
+              <apex:column value="{!olist.id}"/>
+              <apex:column value="{!olist.Name}"/>
+          </apex:pageblocktable>
+      </apex:pageBlock>
+      <apex:commandButton action="{!ClearAll}" value="Clear All" reRender="pb1"/>&nbsp;&nbsp;&nbsp;
+  </apex:form>
+
+</apex:page>

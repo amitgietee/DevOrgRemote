@@ -1,0 +1,26 @@
+<apex:page controller="Assignment_11">
+
+  <h1>Assignment_11</h1>
+  
+  
+  <apex:form >
+      <apex:pageblock >
+      
+             <apex:pageblockTable value="{!accList}" var="a">
+             
+                 <apex:column value="{!a.Name}"/>
+                 <apex:column value="{!a.BillingCountry}"/>
+                 <apex:column value="{!a.Contacts.size}"/>
+                 <apex:column >
+                 <apex:pageBlockTable value="{!a.Contacts}" var="c">
+                    <!-- <apex:column value="{!c.size}" headerValue="No. of Contact Available"/>-->
+                     <!--<apex:outputText>{!c.size}</apex:outputText>-->
+                 </apex:pageBlockTable>
+                 </apex:column>
+             </apex:pageblockTable>
+      
+      </apex:pageblock>
+  
+  </apex:form>
+
+</apex:page>

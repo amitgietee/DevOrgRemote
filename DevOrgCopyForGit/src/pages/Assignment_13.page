@@ -1,0 +1,12 @@
+<apex:page controller="Assignment_13_CNTRLR">
+
+    <h1>Opportunity Count with respect to stage:</h1><br/><br/>
+    
+    <apex:form >
+    <apex:pageBlock ><apex:pageblockTable value="{!oppCountMap}" var="ocm">
+    <apex:column value="{!ocm}"/>
+    <apex:column value="{!oppCountMap[ocm]}"/>
+    </apex:pageblockTable></apex:pageBlock>
+    </apex:form>
+
+</apex:page>

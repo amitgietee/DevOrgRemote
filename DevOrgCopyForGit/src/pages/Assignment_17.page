@@ -1,0 +1,7 @@
+<apex:page standardController="Account" recordSetVar="acc">
+  <h1>Account Detail</h1>
+  
+  <apex:detail subject="{!account.id}" relatedList="false" title="false"/>
+  
+  
+</apex:page>

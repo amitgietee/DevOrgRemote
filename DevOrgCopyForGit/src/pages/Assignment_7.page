@@ -1,0 +1,18 @@
+<apex:page controller="Assignment_7">
+  <h1>Assignment_7</h1><br/><br/><br/>
+  
+  Provide criteria for Account and Contact Search:<br/><br/>
+  
+  <apex:form >
+      <apex:outputText >Enter Account Name:&nbsp;&nbsp;</apex:outputText><apex:inputText value="{!Account_Name}"/><br/><br/><br/>
+      
+       <apex:commandButton action="{!searchAccountDetails}" value="Search" reRender="pb1"/>
+  <apex:pageBlock >
+          <apex:pageblocktable value="{!accList}" var="alist" id="pb1">
+              <apex:column value="{!alist.id}"/>
+              <apex:column value="{!alist.Name}"/>
+          </apex:pageblocktable>
+      </apex:pageBlock>
+  
+  </apex:form>
+</apex:page>
